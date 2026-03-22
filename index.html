@@ -32,7 +32,6 @@
         --text-dim: #333;
         --mono: "Space Mono", monospace;
         --sans: "Space Grotesk", sans-serif;
-        --red: #ff5f57;
       }
       html {
         scroll-behavior: smooth;
@@ -119,11 +118,6 @@
       .nav-links a:hover {
         color: var(--green);
       }
-      .nav-right {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-      }
       .nav-cta {
         display: inline-flex;
         align-items: center;
@@ -142,26 +136,6 @@
       }
       .nav-cta:hover {
         background: #8ad000;
-      }
-      .nav-upload {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        background: transparent;
-        color: var(--green);
-        border: 1px solid var(--border);
-        padding: 0.5rem 1rem;
-        border-radius: 3px;
-        font-size: 0.78rem;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        cursor: pointer;
-        font-family: var(--sans);
-        transition: all 0.2s;
-      }
-      .nav-upload:hover {
-        background: var(--green-subtle);
       }
 
       /* ── HERO ── */
@@ -378,49 +352,6 @@
         margin-top: 0.4rem;
       }
 
-      /* ── URL BANNER ── */
-      .url-banner {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        padding: 1.25rem 1.5rem;
-        margin-bottom: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-      .url-left .url-label {
-        font-family: var(--mono);
-        font-size: 0.65rem;
-        letter-spacing: 0.12em;
-        color: var(--green);
-        margin-bottom: 0.35rem;
-      }
-      .url-left .url-val {
-        font-family: var(--mono);
-        font-size: 0.82rem;
-        color: var(--text);
-      }
-      .url-btn {
-        font-family: var(--mono);
-        font-size: 0.72rem;
-        letter-spacing: 0.08em;
-        padding: 0.55rem 1.1rem;
-        border-radius: 3px;
-        cursor: pointer;
-        border: none;
-        background: var(--green);
-        color: #000;
-        font-weight: 700;
-        transition: background 0.2s;
-        white-space: nowrap;
-      }
-      .url-btn:hover {
-        background: #8ad000;
-      }
-
       /* ── SECTION ── */
       .section {
         padding: 0 0 5rem;
@@ -447,253 +378,37 @@
         color: var(--green);
       }
 
-      /* ── UPLOAD ZONE ── */
-      .upload-zone {
-        border: 2px dashed var(--border);
-        border-radius: 10px;
-        padding: 3rem 2rem;
-        text-align: center;
-        margin-bottom: 2rem;
-        cursor: pointer;
-        background: var(--green-subtle);
-        transition: all 0.2s;
-        position: relative;
-        overflow: hidden;
-      }
-      .upload-zone:hover,
-      .upload-zone.drag {
-        border-color: var(--green);
-        background: rgba(118, 185, 0, 0.12);
-      }
-      .upload-zone.uploading {
-        border-color: var(--green);
-        cursor: default;
-      }
-      .upload-zone-icon {
-        width: 56px;
-        height: 56px;
-        border: 1px solid var(--border);
-        border-radius: 50%;
-        margin: 0 auto 1.25rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--surface);
-      }
-      .upload-zone-icon svg {
-        width: 24px;
-        height: 24px;
-        stroke: var(--green);
-        fill: none;
-        stroke-width: 1.5;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-      .upload-zone h3 {
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin-bottom: 0.4rem;
-      }
-      .upload-zone p {
-        font-size: 0.82rem;
-        color: var(--text-muted);
-        margin-bottom: 1rem;
-        line-height: 1.7;
-      }
-      .fmt-row {
-        display: flex;
-        gap: 0.5rem;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .fmt {
-        font-family: var(--mono);
-        font-size: 0.65rem;
-        letter-spacing: 0.1em;
-        padding: 0.25rem 0.65rem;
-        border-radius: 2px;
-        background: var(--surface);
-        border: 1px solid var(--border-dim);
-        color: var(--text-muted);
-      }
-
-      /* progress */
-      .progress-wrap {
-        margin-top: 1.25rem;
-        display: none;
-      }
-      .progress-wrap.show {
-        display: block;
-      }
-      .progress-bar-bg {
-        height: 4px;
-        background: var(--surface3);
-        border-radius: 2px;
-        overflow: hidden;
-      }
-      .progress-bar-fill {
-        height: 100%;
-        background: var(--green);
-        border-radius: 2px;
-        width: 0%;
-        transition: width 0.3s;
-      }
-      .progress-label {
-        font-family: var(--mono);
-        font-size: 0.7rem;
-        color: var(--green);
-        margin-top: 0.5rem;
-      }
-
-      /* ── API KEY SETUP ── */
-      .api-setup {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-      }
-      .api-setup-title {
-        font-family: var(--mono);
-        font-size: 0.72rem;
-        letter-spacing: 0.1em;
-        color: var(--green);
-        margin-bottom: 1rem;
-      }
-      .api-row {
-        display: flex;
-        gap: 0.75rem;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      .api-input {
-        flex: 1;
-        min-width: 200px;
-        background: var(--surface2);
-        border: 1px solid var(--border-dim);
-        border-radius: 4px;
-        padding: 0.6rem 0.85rem;
-        color: var(--text);
-        font-family: var(--mono);
-        font-size: 0.78rem;
-        outline: none;
-        transition: border-color 0.2s;
-      }
-      .api-input:focus {
-        border-color: var(--green);
-      }
-      .api-input::placeholder {
-        color: var(--text-dim);
-      }
-      .api-save {
-        font-family: var(--mono);
-        font-size: 0.72rem;
-        padding: 0.6rem 1rem;
-        border-radius: 3px;
-        cursor: pointer;
-        border: none;
-        background: var(--green);
-        color: #000;
-        font-weight: 700;
-        white-space: nowrap;
-        transition: background 0.2s;
-      }
-      .api-save:hover {
-        background: #8ad000;
-      }
-      .api-status {
-        font-family: var(--mono);
-        font-size: 0.72rem;
-        margin-top: 0.65rem;
-      }
-      .api-status.ok {
-        color: var(--green);
-      }
-      .api-status.err {
-        color: var(--red);
-      }
-      .api-hint {
-        font-size: 0.78rem;
-        color: var(--text-muted);
-        margin-top: 0.75rem;
-        line-height: 1.7;
-      }
-      .api-hint a {
-        color: var(--green);
-        text-decoration: none;
-      }
-      .api-hint a:hover {
-        text-decoration: underline;
-      }
-      .api-hint code {
-        font-family: var(--mono);
-        font-size: 0.72rem;
-        background: rgba(118, 185, 0, 0.1);
-        padding: 0.1rem 0.35rem;
-        border-radius: 2px;
-        color: var(--green);
-      }
-
       /* ── PRESENTATIONS GRID ── */
-      #pres-grid {
+      .pres-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1px;
-        background: var(--border-dim);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
       }
       .pres-card {
         background: var(--surface);
+        border: 1px solid var(--border-dim);
+        border-radius: 8px;
         overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        transition: background 0.2s;
+        transition: border-color 0.3s, transform 0.2s;
       }
       .pres-card:hover {
-        background: var(--surface2);
+        border-color: var(--border);
+        transform: translateY(-2px);
       }
       .pres-thumb {
-        aspect-ratio: 16/10;
-        position: relative;
+        aspect-ratio: 16/9;
         overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: relative;
       }
-      .pres-thumb-inner {
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-      }
-      .pth {
-        height: 3px;
-        border-radius: 1px;
-        background: rgba(255, 255, 255, 0.08);
-      }
-      .pth.g {
-        background: var(--green);
-        width: 45%;
-      }
-      .pth.m {
-        width: 80%;
-      }
-      .pth.f {
+      .pres-thumb img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s;
       }
-      .pth.s {
-        width: 60%;
-      }
-      .pth-dots {
-        display: flex;
-        gap: 6px;
-        margin-top: 4px;
-      }
-      .pth-dot {
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid var(--border-dim);
+      .pres-card:hover .pres-thumb img {
+        transform: scale(1.03);
       }
       .pres-thumb-label {
         position: absolute;
@@ -707,37 +422,10 @@
         background: rgba(118, 185, 0, 0.15);
         border: 1px solid var(--border);
         color: var(--green);
-      }
-      .pres-thumb-size {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        font-family: var(--mono);
-        font-size: 0.6rem;
-        color: rgba(255, 255, 255, 0.35);
-      }
-      .pres-glow {
-        position: absolute;
-        bottom: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60%;
-        height: 40px;
-        background: radial-gradient(
-          ellipse,
-          rgba(118, 185, 0, 0.15),
-          transparent 70%
-        );
-        filter: blur(8px);
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-      .pres-card:hover .pres-glow {
-        opacity: 1;
+        backdrop-filter: blur(6px);
       }
       .pres-body {
-        padding: 1.1rem 1.25rem;
-        flex: 1;
+        padding: 1.25rem 1.5rem;
       }
       .pres-cat {
         font-family: var(--mono);
@@ -748,93 +436,61 @@
         margin-bottom: 0.5rem;
       }
       .pres-title {
-        font-size: 0.88rem;
+        font-size: 1rem;
         font-weight: 600;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.35rem;
         color: var(--text);
       }
-      .pres-date {
-        font-size: 0.72rem;
+      .pres-desc {
+        font-size: 0.82rem;
         color: var(--text-muted);
+        line-height: 1.7;
+        margin-bottom: 1rem;
       }
       .pres-footer {
-        padding: 0.65rem 1.25rem;
+        padding: 0.85rem 1.5rem;
         border-top: 1px solid var(--border-dim);
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
-      .open-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        font-family: var(--mono);
-        font-size: 0.7rem;
-        color: var(--green);
-        text-decoration: none;
-        letter-spacing: 0.05em;
-        background: none;
-        border: none;
-        cursor: pointer;
-        transition: opacity 0.2s;
-        padding: 0;
-      }
-      .open-btn:hover {
-        opacity: 0.7;
-      }
-      .open-btn svg {
-        width: 11px;
-        height: 11px;
-        stroke: currentColor;
-        fill: none;
-        stroke-width: 2;
-      }
-      .copy-link-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.3rem;
+      .pres-meta {
         font-family: var(--mono);
         font-size: 0.65rem;
         color: var(--text-muted);
-        background: none;
-        border: none;
-        cursor: pointer;
-        transition: color 0.2s;
-        padding: 0;
-      }
-      .copy-link-btn:hover {
-        color: var(--green);
-      }
-      .footer-btns {
         display: flex;
+        gap: 1rem;
+      }
+      .dl-btn {
+        display: inline-flex;
         align-items: center;
-        gap: 0.75rem;
-      }
-      .del-btn {
-        background: none;
-        border: none;
-        color: var(--text-dim);
+        gap: 0.45rem;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.06em;
+        padding: 0.5rem 1.1rem;
+        border-radius: 3px;
         cursor: pointer;
-        font-size: 0.85rem;
-        padding: 0.1rem 0.3rem;
-        transition: color 0.2s;
-        line-height: 1;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--green);
+        font-weight: 600;
+        transition: all 0.2s;
+        text-decoration: none;
       }
-      .del-btn:hover {
-        color: var(--red);
+      .dl-btn:hover {
+        background: var(--green);
+        color: #000;
+        border-color: var(--green);
       }
-
-      /* empty state */
-      .empty-state {
-        grid-column: 1/-1;
-        text-align: center;
-        padding: 4rem 2rem;
-        background: var(--surface);
-      }
-      .empty-state p {
-        color: var(--text-muted);
-        font-size: 0.88rem;
-        margin-bottom: 1rem;
+      .dl-btn svg {
+        width: 13px;
+        height: 13px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
       }
 
       /* ── ABOUT ── */
@@ -890,9 +546,7 @@
         justify-content: space-between;
         text-decoration: none;
         color: var(--text);
-        transition:
-          border-color 0.2s,
-          background 0.2s;
+        transition: border-color 0.2s, background 0.2s;
         cursor: pointer;
       }
       .link-card:hover {
@@ -968,101 +622,6 @@
         color: var(--green);
       }
 
-      /* ── META MODAL (title/cat before upload) ── */
-      .modal-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.88);
-        z-index: 500;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        backdrop-filter: blur(4px);
-      }
-      .modal-overlay.open {
-        display: flex;
-      }
-      .modal {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        width: 100%;
-        max-width: 480px;
-        padding: 2rem;
-        margin: 1rem;
-      }
-      .modal h3 {
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin-bottom: 0.35rem;
-      }
-      .modal-sub {
-        font-size: 0.82rem;
-        color: var(--text-muted);
-        margin-bottom: 1.5rem;
-        line-height: 1.7;
-      }
-      .field {
-        margin-bottom: 1rem;
-      }
-      .field label {
-        display: block;
-        font-family: var(--mono);
-        font-size: 0.65rem;
-        letter-spacing: 0.12em;
-        color: var(--green);
-        margin-bottom: 0.4rem;
-      }
-      .field input,
-      .field select {
-        width: 100%;
-        background: var(--surface2);
-        border: 1px solid var(--border-dim);
-        border-radius: 4px;
-        padding: 0.65rem 0.85rem;
-        color: var(--text);
-        font-family: var(--sans);
-        font-size: 0.85rem;
-        outline: none;
-        transition: border-color 0.2s;
-      }
-      .field input:focus,
-      .field select:focus {
-        border-color: var(--green);
-      }
-      .field input::placeholder {
-        color: var(--text-dim);
-      }
-      .field select option {
-        background: var(--surface2);
-      }
-      .modal-actions {
-        display: flex;
-        gap: 0.75rem;
-        margin-top: 1.5rem;
-      }
-      .modal-actions button {
-        flex: 1;
-      }
-      .btn-cancel {
-        background: transparent;
-        color: var(--text-muted);
-        border: 1px solid var(--border-dim);
-      }
-      .btn-cancel:hover {
-        border-color: var(--text-muted);
-      }
-      .file-name-preview {
-        font-family: var(--mono);
-        font-size: 0.72rem;
-        color: var(--green);
-        background: var(--green-subtle);
-        border: 1px solid var(--border);
-        border-radius: 4px;
-        padding: 0.5rem 0.75rem;
-        margin-bottom: 1.25rem;
-      }
-
       /* ── TOAST ── */
       .toast {
         position: fixed;
@@ -1079,18 +638,13 @@
         border-radius: 3px;
         opacity: 0;
         transform: translateY(8px);
-        transition:
-          opacity 0.25s,
-          transform 0.25s;
+        transition: opacity 0.25s, transform 0.25s;
         pointer-events: none;
         max-width: 320px;
       }
       .toast.show {
         opacity: 1;
         transform: translateY(0);
-      }
-      .toast.err {
-        background: var(--red);
       }
 
       @media (max-width: 900px) {
@@ -1104,22 +658,14 @@
         .stats-row {
           grid-template-columns: repeat(2, 1fr);
         }
-        #pres-grid {
-          grid-template-columns: 1fr 1fr;
+        .pres-grid {
+          grid-template-columns: 1fr;
         }
         .about-grid {
           grid-template-columns: 1fr;
         }
         .nav-links {
           display: none;
-        }
-      }
-      @media (max-width: 580px) {
-        #pres-grid {
-          grid-template-columns: 1fr;
-        }
-        .stats-row {
-          grid-template-columns: 1fr 1fr;
         }
       }
     </style>
@@ -1131,37 +677,15 @@
       <nav>
         <div class="container">
           <div class="nav-inner">
-            <a class="logo" href="#"
-              ><span class="logo-b">[</span>IK<span class="logo-b">]</span
-              >&nbsp;irakli.kalandadze</a
-            >
+            <a class="logo" href="#">
+              <span class="logo-b">[</span>IK<span class="logo-b">]</span>&nbsp;irakli.kalandadze
+            </a>
             <ul class="nav-links">
               <li><a href="#presentations">Work</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="nav-right">
-              <button class="nav-upload" onclick="triggerUpload()">
-                <svg
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-                  <polyline points="17 8 12 3 7 8" />
-                  <line x1="12" y1="3" x2="12" y2="15" />
-                </svg>
-                Upload
-              </button>
-              <button class="nav-cta" onclick="copySiteUrl()">
-                Copy URL ↗
-              </button>
-            </div>
+            <button class="nav-cta" onclick="copySiteUrl()">Copy URL ↗</button>
           </div>
         </div>
       </nav>
@@ -1174,22 +698,15 @@
               <div class="hero-eyebrow">AI · Presentations · Future</div>
               <h1>
                 <span class="name">Irakli Kalandadze</span>
-                <span class="tagline"
-                  >Building intelligence, one slide at a time.</span
-                >
+                <span class="tagline">Building intelligence, one slide at a time.</span>
               </h1>
               <p class="hero-desc">
                 A curated portfolio of AI-focused presentations, strategy decks,
-                and research materials — built for Creative Market. Upload
-                directly, share instantly.
+                and research materials. Download directly, use instantly.
               </p>
               <div class="hero-actions">
-                <a class="btn btn-green" href="#presentations"
-                  >Browse presentations</a
-                >
-                <button class="btn btn-outline" onclick="copySiteUrl()">
-                  Copy site URL
-                </button>
+                <a class="btn btn-green" href="#presentations">Browse presentations</a>
+                <button class="btn btn-outline" onclick="copySiteUrl()">Copy site URL</button>
               </div>
             </div>
             <div class="hero-terminal">
@@ -1200,37 +717,18 @@
                 <span class="terminal-title">portfolio_init.py</span>
               </div>
               <div class="terminal-body">
-                <div class="t-line">
-                  <span class="t-prompt">▸</span
-                  ><span class="t-cmd">import irakli.kalandadze as ik</span>
-                </div>
-                <div class="t-line">
-                  <span class="t-prompt">▸</span
-                  ><span class="t-cmd">ik.load_presentations()</span>
-                </div>
-                <div class="t-out green" id="term-loaded">
-                  ✓ 2 presentations loaded
-                </div>
-                <div class="t-line" style="margin-top: 0.5rem">
-                  <span class="t-prompt">▸</span
-                  ><span class="t-cmd">ik.upload_engine</span>
-                </div>
-                <div class="t-out green">'Uploadcare CDN'</div>
-                <div class="t-line" style="margin-top: 0.5rem">
-                  <span class="t-prompt">▸</span
-                  ><span class="t-cmd">ik.platform</span>
-                </div>
+                <div class="t-line"><span class="t-prompt">▸</span><span class="t-cmd">import irakli.kalandadze as ik</span></div>
+                <div class="t-line"><span class="t-prompt">▸</span><span class="t-cmd">ik.load_presentations()</span></div>
+                <div class="t-out green">✓ 4 presentations loaded</div>
+                <div class="t-line" style="margin-top:0.5rem"><span class="t-prompt">▸</span><span class="t-cmd">ik.platform</span></div>
                 <div class="t-out green">'Creative Market'</div>
-                <div class="t-line" style="margin-top: 0.5rem">
-                  <span class="t-prompt">▸</span
-                  ><span class="t-cmd"><span class="cursor"></span></span>
-                </div>
+                <div class="t-line" style="margin-top:0.5rem"><span class="t-prompt">▸</span><span class="t-cmd"><span class="cursor"></span></span></div>
               </div>
             </div>
           </div>
           <div class="stats-row">
             <div class="stat-cell">
-              <div class="stat-num" id="stat-count">2</div>
+              <div class="stat-num">4</div>
               <div class="stat-label">Presentations published</div>
             </div>
             <div class="stat-cell">
@@ -1249,111 +747,120 @@
         </div>
       </section>
 
-      <!-- URL BANNER -->
-      <section>
-        <div class="container">
-          <div class="url-banner">
-            <div class="url-left">
-              <div class="url-label">
-                YOUR PORTFOLIO URL — Creative Market-ზე ჩასასვი
-              </div>
-              <div class="url-val" id="site-url-display">—</div>
-            </div>
-            <button class="url-btn" onclick="copySiteUrl()">Copy URL ↗</button>
-          </div>
-        </div>
-      </section>
-
       <!-- PRESENTATIONS -->
       <section class="section" id="presentations">
         <div class="container">
           <div class="section-head">
             <h2>Presentations</h2>
-            <button
-              class="btn btn-green"
-              onclick="triggerUpload()"
-              style="font-size: 0.75rem; padding: 0.5rem 1.1rem"
-            >
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-                <polyline points="17 8 12 3 7 8" />
-                <line x1="12" y1="3" x2="12" y2="15" />
-              </svg>
-              Upload presentation
-            </button>
           </div>
 
-          <!-- UPLOADCARE API KEY SETUP -->
-          <div class="api-setup" id="api-setup">
-            <div class="api-setup-title">
-              ⚙ UPLOADCARE SETUP — ერთხელ გააკეთე, მერე ავტომატურია
-            </div>
-            <div class="api-row">
-              <input
-                class="api-input"
-                type="text"
-                id="uc-key-input"
-                placeholder="შეიყვანე Uploadcare Public Key (მაგ. demopublickey)"
-              />
-              <button class="api-save" onclick="saveKey()">Save Key</button>
-            </div>
-            <div class="api-status" id="key-status"></div>
-            <div class="api-hint">
-              1. გადადი
-              <a href="https://uploadcare.com" target="_blank"
-                >uploadcare.com</a
-              >
-              → უფასოდ დარეგისტრირდი<br />
-              2. Dashboard → პროექტი → <code>API Keys</code> → დააკოპირე
-              <code>Public key</code><br />
-              3. ჩასვი ზემოთ და დააჭირე Save — მხოლოდ ერთხელ!
-            </div>
-          </div>
+          <!--
+            ╔══════════════════════════════════════════════════════╗
+            ║  ახალი პრეზენტაციის დასამატებლად:                    ║
+            ║  1. thumbnail ჩააგდე assets/thumbs/ ფოლდერში        ║
+            ║  2. .pptx ფაილი ჩააგდე assets/files/ ფოლდერში       ║
+            ║  3. დააკოპირე ქვემოთ ერთი pres-card ბლოკი            ║
+            ║  4. შეცვალე: img src, სათაური, აღწერა, download href  ║
+            ║  5. git push → Vercel ავტომატურად განახლდება          ║
+            ╚══════════════════════════════════════════════════════╝
+          -->
 
-          <!-- UPLOAD ZONE -->
-          <div class="upload-zone" id="upload-zone" onclick="triggerUpload()">
-            <input
-              type="file"
-              id="file-input"
-              accept=".pptx,.pdf,.key,.ppt"
-              style="display: none"
-              onchange="onFileChosen(event)"
-            />
-            <div class="upload-zone-icon">
-              <svg viewBox="0 0 24 24">
-                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-                <polyline points="17 8 12 3 7 8" />
-                <line x1="12" y1="3" x2="12" y2="15" />
-              </svg>
-            </div>
-            <h3 id="uz-title">Drag & drop ან დააჭირე ასარჩევად</h3>
-            <p id="uz-sub">
-              Presentation პირდაპირ ვებსაიტიდან ითვირთება Uploadcare-ზე.<br />ვიზიტორი
-              ნახავს და პირდაპირ გახსნის.
-            </p>
-            <div class="fmt-row">
-              <span class="fmt">PPTX</span><span class="fmt">PDF</span
-              ><span class="fmt">KEY</span><span class="fmt">PPT</span>
-            </div>
-            <div class="progress-wrap" id="progress-wrap">
-              <div class="progress-bar-bg">
-                <div class="progress-bar-fill" id="progress-fill"></div>
+          <div class="pres-grid">
+
+            <!-- ── 1. Optimizing Work with AI ── -->
+            <div class="pres-card">
+              <div class="pres-thumb">
+                <img src="assets/thumbs/ai-productivity.png" alt="Optimizing Work with AI" loading="lazy" />
+                <div class="pres-thumb-label">PPTX</div>
               </div>
-              <div class="progress-label" id="progress-label">Uploading...</div>
+              <div class="pres-body">
+                <div class="pres-cat">AI · Productivity</div>
+                <div class="pres-title">Optimizing Work with AI</div>
+                <div class="pres-desc">Practical applications for streamlined productivity. Exploring the most popular AI tools and their specific applications.</div>
+              </div>
+              <div class="pres-footer">
+                <div class="pres-meta">
+                  <span>PPTX</span>
+                  <span>1.5 MB</span>
+                </div>
+                <a class="dl-btn" href="assets/files/AI_Productivity_Presentation.pptx" download>
+                  <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download
+                </a>
+              </div>
             </div>
-          </div>
 
-          <!-- GRID -->
-          <div id="pres-grid"></div>
+            <!-- ── 2. AI & The Law ── -->
+            <div class="pres-card">
+              <div class="pres-thumb">
+                <img src="assets/thumbs/ai-and-the-law.png" alt="AI & The Law" loading="lazy" />
+                <div class="pres-thumb-label">PPTX</div>
+              </div>
+              <div class="pres-body">
+                <div class="pres-cat">AI · Legal</div>
+                <div class="pres-title">AI & The Law</div>
+                <div class="pres-desc">What every company must know. EU AI Act, Copyright, Liability, GDPR, AI Ethics, and Legal Risks — clearly, without the jargon.</div>
+              </div>
+              <div class="pres-footer">
+                <div class="pres-meta">
+                  <span>PPTX</span>
+                  <span>16 slides</span>
+                </div>
+                <a class="dl-btn" href="assets/files/ai-and-the-law.pptx" download>
+                  <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download
+                </a>
+              </div>
+            </div>
+
+            <!-- ── 3. Prompt Engineering Guide ── -->
+            <div class="pres-card">
+              <div class="pres-thumb">
+                <img src="assets/thumbs/prompt-engineering.png" alt="Prompt Engineering Guide" loading="lazy" />
+                <div class="pres-thumb-label">PPTX</div>
+              </div>
+              <div class="pres-body">
+                <div class="pres-cat">AI · Prompt Engineering</div>
+                <div class="pres-title">Prompt Engineering Guide</div>
+                <div class="pres-desc">Talk to AI like a pro. Most people get average results from AI. This guide shows you how to get extraordinary ones — using the exact same tools, differently.</div>
+              </div>
+              <div class="pres-footer">
+                <div class="pres-meta">
+                  <span>PPTX</span>
+                  <span>14 slides</span>
+                </div>
+                <a class="dl-btn" href="assets/files/prompt-engineering-guide.pptx" download>
+                  <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download
+                </a>
+              </div>
+            </div>
+
+            <!-- ── 4. NVIDIA Innovation ── -->
+            <div class="pres-card">
+              <div class="pres-thumb">
+                <img src="assets/thumbs/nvidia-innovation.png" alt="NVIDIA: Architect of Innovation" loading="lazy" />
+                <div class="pres-thumb-label">PPTX</div>
+              </div>
+              <div class="pres-body">
+                <div class="pres-cat">AI · Technical</div>
+                <div class="pres-title">NVIDIA: Architect of Innovation in the Age of AI</div>
+                <div class="pres-desc">A deep dive into NVIDIA's role in shaping the future of artificial intelligence — from GPU architectures to AI infrastructure.</div>
+              </div>
+              <div class="pres-footer">
+                <div class="pres-meta">
+                  <span>PPTX</span>
+                  <span>13.4 MB</span>
+                </div>
+                <a class="dl-btn" href="assets/files/Nvidia_inovation_template_for_future_AI_etc_.pptx" download>
+                  <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <!-- /pres-grid -->
         </div>
       </section>
 
@@ -1373,22 +880,18 @@
               <p>
                 From GPU architectures to large language model strategy, every
                 deck is crafted with precision, depth, and design clarity.
-                Available on Creative Market.
               </p>
               <div class="about-tags">
-                <span class="tag">AI Strategy</span><span class="tag">LLMs</span
-                ><span class="tag">GPU / CUDA</span>
-                <span class="tag">Neural Networks</span
-                ><span class="tag">Data Science</span
-                ><span class="tag">Future of Work</span>
+                <span class="tag">AI Strategy</span>
+                <span class="tag">LLMs</span>
+                <span class="tag">GPU / CUDA</span>
+                <span class="tag">Neural Networks</span>
+                <span class="tag">Data Science</span>
+                <span class="tag">Future of Work</span>
               </div>
             </div>
             <div class="about-links" id="contact">
-              <a
-                class="link-card"
-                href="https://creativemarket.com"
-                target="_blank"
-              >
+              <a class="link-card" href="https://creativemarket.com" target="_blank">
                 <div class="link-card-left">
                   <div class="link-icon">CM</div>
                   <div>
@@ -1413,9 +916,7 @@
                   <div class="link-icon">URL</div>
                   <div>
                     <div class="link-name">Copy portfolio URL</div>
-                    <div class="link-desc">
-                      Creative Market-ზე გასაზიარებლად
-                    </div>
+                    <div class="link-desc">Creative Market-ზე გასაზიარებლად</div>
                   </div>
                 </div>
                 <div class="link-arrow">↗</div>
@@ -1429,13 +930,10 @@
         <div class="container">
           <div class="footer-inner">
             <div class="footer-left">
-              <span>Irakli Kalandadze</span><br />AI Portfolio ·
-              <span>Creative Market</span>
+              <span>Irakli Kalandadze</span><br />AI Portfolio · <span>Creative Market</span>
             </div>
             <div class="footer-right">
-              <a href="https://creativemarket.com" target="_blank"
-                >Creative Market</a
-              >
+              <a href="https://creativemarket.com" target="_blank">Creative Market</a>
               <a href="mailto:irakli.kalandadze0@gmail.com">Email</a>
             </div>
           </div>
@@ -1443,316 +941,20 @@
       </footer>
     </div>
 
-    <!-- META MODAL -->
-    <div class="modal-overlay" id="meta-modal">
-      <div class="modal">
-        <h3>Presentation-ის დეტალები</h3>
-        <p class="modal-sub">
-          ფაილი ასარჩევად მზადაა. შეიყვანე სათაური და კატეგორია.
-        </p>
-        <div class="file-name-preview" id="modal-filename">—</div>
-        <div class="field">
-          <label>სათაური</label
-          ><input type="text" id="m-title" placeholder="AI Strategy 2025" />
-        </div>
-        <div class="field">
-          <label>კატეგორია</label>
-          <select id="m-cat">
-            <option>AI Strategy</option>
-            <option>Research</option>
-            <option>Business</option>
-            <option>Technical</option>
-            <option>Keynote</option>
-            <option>Data Science</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>სლაიდების რაოდენობა (სურვილისამებრ)</label
-          ><input type="number" id="m-slides" placeholder="24" min="1" />
-        </div>
-        <div class="modal-actions">
-          <button class="btn btn-cancel" onclick="cancelMeta()">
-            გაუქმება
-          </button>
-          <button class="btn btn-green" onclick="confirmMeta()">
-            ატვირთვა ↑
-          </button>
-        </div>
-      </div>
-    </div>
-
     <div class="toast" id="toast"></div>
 
     <script>
-      // ── CONFIG ──
-      const DEFAULT=[
-        {id:1,title:'The Future Runs on AI',cat:'Research',slides:'?',link:'https://docs.google.com/presentation/d/1ipxSq5SX0aSNWwr51Kuvt2V46SkEnpNe/preview',date:'Today',bg:'linear-gradient(135deg,#0f1a00,#1a2c00)',tag:'FUT'},
-        {id:2,title:'USE AI PROPERLY',cat:'AI Strategy',slides:'?',link:'https://docs.google.com/presentation/d/1nx_rauh525xB4u74DKTaGOJBU5Zkl4d3/preview',date:'Today',bg:'linear-gradient(135deg,#0a0f1a,#0f1e30)',tag:'AI'},
-      ];
-      BGS=['linear-gradient(135deg,#0f1a00,#1a2c00)','linear-gradient(135deg,#0a0f1a,#0f1e30)','linear-gradient(135deg,#110a1a,#1e0f30)','linear-gradient(135deg,#1a1000,#2c1c00)','linear-gradient(135deg,#001a12,#002c1e)','linear-gradient(135deg,#1a0800,#300f00)'];
-
-      // ── STATE ──
-      function loadPres(){try{const s=localStorage.getItem('ik_pres_v5');return s?JSON.parse(s):JSON.parse(JSON.stringify(DEFAULT))}catch(e){return JSON.parse(JSON.stringify(DEFAULT));}}
-      function savePres(p){try{localStorage.setItem('ik_pres_v5',JSON.stringify(p));}catch(e){}}
-      let pres=loadPres();
-      let pendingFile=null;
-
-      // ── KEY MANAGEMENT ──
-      function getKey(){return localStorage.getItem('uc_key')||'';}
-      async function saveKey(){
-        const k=document.getElementById('uc-key-input').value.trim();
-        if(!k){showToast('Key შეიყვანე!',true);return;}
-
-        const statusEl=document.getElementById('key-status');
-        statusEl.className='api-status';
-        statusEl.textContent='⏳ Checking key...';
-
-        // Test key with a tiny validation request
-        try {
-          const fd = new FormData();
-          fd.append('UPLOADCARE_PUB_KEY', k);
-          fd.append('UPLOADCARE_STORE', '0');
-          // upload a tiny test blob
-          const testBlob = new Blob(['test'], {type:'text/plain'});
-          fd.append('file', testBlob, 'test.txt');
-
-          const res = await fetch('https://upload.uploadcare.com/base/', {method:'POST', body:fd});
-          const data = await res.json();
-
-          if(data.file){
-            localStorage.setItem('uc_key', k);
-            updateKeyStatus();
-            showToast('✓ Key სწორია და შენახულია!');
-          } else {
-            statusEl.className='api-status err';
-            statusEl.textContent='⚠ Key არასწორია — Uploadcare Dashboard-იდან Public Key-ი დააკოპირე';
-          }
-        } catch(e) {
-          // network error — save anyway
-          localStorage.setItem('uc_key', k);
-          updateKeyStatus();
-          showToast('Key შენახულია (ვერ შევამოწმე ქსელი)');
-        }
+      function copySiteUrl() {
+        navigator.clipboard.writeText(window.location.href.replace(/[?#].*/, ''))
+          .then(() => showToast('URL copied! Paste it on Creative Market ↗'));
       }
-      function updateKeyStatus(){
-        const k=getKey();
-        const el=document.getElementById('key-status');
-        const setup=document.getElementById('api-setup');
-        if(k){
-          el.className='api-status ok';
-          el.textContent='✓ Key შენახულია — upload მზადაა';
-          document.getElementById('uc-key-input').value=k;
-          setup.style.opacity='0.6';
-        } else {
-          el.className='api-status err';
-          el.textContent='⚠ Key არ არის — ზემოთ შეიყვანე';
-        }
+      function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.className = 'toast';
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2800);
       }
-
-      // ── UPLOAD FLOW ──
-      function triggerUpload(){
-        if(!getKey()){
-          showToast('ჯერ Uploadcare Key შეიყვანე!',true);
-          document.getElementById('api-setup').scrollIntoView({behavior:'smooth'});
-          return;
-        }
-        document.getElementById('file-input').click();
-      }
-
-      function onFileChosen(e){
-        const file=e.target.files[0];
-        if(!file)return;
-        pendingFile=file;
-        document.getElementById('modal-filename').textContent='📄 '+file.name+' ('+fmtSize(file.size)+')';
-        // auto-fill title from filename
-        const name=file.name.replace(/\.[^.]+$/,'').replace(/[-_]/g,' ');
-        document.getElementById('m-title').value=name;
-        document.getElementById('meta-modal').classList.add('open');
-      }
-
-      function cancelMeta(){
-        document.getElementById('meta-modal').classList.remove('open');
-        pendingFile=null;
-        document.getElementById('file-input').value='';
-      }
-
-      function confirmMeta(){
-        const title=document.getElementById('m-title').value.trim();
-        if(!title){showToast('სათაური შეიყვანე!',true);return;}
-        const cat=document.getElementById('m-cat').value;
-        const slides=parseInt(document.getElementById('m-slides').value)||'?';
-        document.getElementById('meta-modal').classList.remove('open');
-        uploadToUploadcare(pendingFile,title,cat,slides);
-        pendingFile=null;
-      }
-
-      async function uploadToUploadcare(file,title,cat,slides){
-        const key=getKey();
-        if(!key){showToast('Uploadcare Key შეიყვანე!',true);return;}
-
-        const zone=document.getElementById('upload-zone');
-        const prog=document.getElementById('progress-wrap');
-        const fill=document.getElementById('progress-fill');
-        const label=document.getElementById('progress-label');
-        const uzTitle=document.getElementById('uz-title');
-
-        zone.classList.add('uploading');
-        zone.onclick=null;
-        prog.classList.add('show');
-        fill.style.width='10%';
-        uzTitle.textContent='Uploading...';
-        label.textContent='Connecting to Uploadcare...';
-
-        try {
-          const fd = new FormData();
-          fd.append('UPLOADCARE_PUB_KEY', key);
-          fd.append('UPLOADCARE_STORE', '1');
-          fd.append('file', file, file.name);
-
-          // Simulate progress while uploading
-          let prog_val = 10;
-          const ticker = setInterval(()=>{
-            if(prog_val < 85){ prog_val += 5; fill.style.width=prog_val+'%'; label.textContent='Uploading... '+prog_val+'%'; }
-          }, 300);
-
-          const res = await fetch('https://upload.uploadcare.com/base/', {
-            method: 'POST',
-            body: fd
-          });
-
-          clearInterval(ticker);
-
-          if(!res.ok){
-            const errText = await res.text();
-            console.error('Uploadcare response:', res.status, errText);
-            throw new Error('HTTP '+res.status+': '+errText);
-          }
-
-          const data = await res.json();
-          console.log('Uploadcare success:', data);
-
-          fill.style.width='100%';
-          label.textContent='Upload complete!';
-
-          const uuid = data.file;
-          const url = 'https://ucarecdn.com/'+uuid+'/'+encodeURIComponent(file.name);
-
-          const newP = {
-            id: Date.now(), title, cat, slides,
-            url, uuid,
-            date: 'Just now',
-            size: fmtSize(file.size),
-            filename: file.name,
-            bg: BGS[pres.length % BGS.length],
-            tag: cat.slice(0,3).toUpperCase()
-          };
-          pres.push(newP);
-          savePres(pres);
-          render();
-          setTimeout(()=>{ resetUploadZone(); showToast('✓ Uploaded! Presentation live.'); }, 600);
-
-        } catch(err) {
-          console.error('Upload error:', err);
-          resetUploadZone();
-          showToast('Error: '+err.message, true);
-        }
-      }
-
-      function resetUploadZone(){
-        const zone=document.getElementById('upload-zone');
-        zone.classList.remove('uploading');
-        zone.onclick=triggerUpload;
-        document.getElementById('progress-wrap').classList.remove('show');
-        document.getElementById('progress-fill').style.width='0%';
-        document.getElementById('uz-title').textContent='Drag & drop ან დააჭირე ასარჩევად';
-        document.getElementById('file-input').value='';
-      }
-
-      // drag and drop
-      const uz=document.getElementById('upload-zone');
-      uz.addEventListener('dragover',e=>{e.preventDefault();uz.classList.add('drag');});
-      uz.addEventListener('dragleave',()=>uz.classList.remove('drag'));
-      uz.addEventListener('drop',e=>{
-        e.preventDefault();uz.classList.remove('drag');
-        const file=e.dataTransfer.files[0];
-        if(!file)return;
-        if(!getKey()){showToast('ჯერ Uploadcare Key შეიყვანე!',true);return;}
-        pendingFile=file;
-        document.getElementById('modal-filename').textContent='📄 '+file.name+' ('+fmtSize(file.size)+')';
-        const name=file.name.replace(/\.[^.]+$/,'').replace(/[-_]/g,' ');
-        document.getElementById('m-title').value=name;
-        document.getElementById('meta-modal').classList.add('open');
-      });
-
-      // ── RENDER ──
-      function render(){
-        const grid=document.getElementById('pres-grid');
-        grid.innerHTML='';
-
-
-
-        pres.forEach(p=>{
-          const c=document.createElement('div');
-          c.className='pres-card';
-          c.innerHTML=`
-            <div class="pres-thumb" style="background:${p.bg}">
-              <div class="pres-thumb-inner">
-                <div class="pth g"></div><div class="pth f"></div><div class="pth m"></div>
-                <div class="pth-dots"><div class="pth-dot"></div><div class="pth-dot"></div></div>
-              </div>
-              <div class="pres-glow"></div>
-              <div class="pres-thumb-label">${p.tag}</div>
-              ${p.size?`<div class="pres-thumb-size">${p.size}</div>`:''}
-            </div>
-            <div class="pres-body">
-              <div class="pres-cat">${p.cat}</div>
-              <div class="pres-title">${p.title}</div>
-              <div class="pres-date">Updated ${p.date}</div>
-            </div>
-            <div class="pres-footer">
-              <a class="open-btn" href="${p.url}" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Open
-              </a>
-              <div class="footer-btns">
-                <button class="copy-link-btn" onclick="copyPresLink('${p.url}')">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
-                  Copy link
-                </button>
-                <button class="del-btn" onclick="del(${p.id})" title="Remove">✕</button>
-              </div>
-            </div>`;
-          grid.appendChild(c);
-        });
-        updateStats();
-        
-      }
-
-      function del(id){
-        if(!confirm('Remove this presentation?'))return;
-        pres=pres.filter(p=>p.id!==id);
-        savePres(pres);render();showToast('Removed');
-      }
-
-      function copyPresLink(url){
-        navigator.clipboard.writeText(url).then(()=>showToast('Presentation link copied!'));
-      }
-
-      function updateStats(){
-        document.getElementById('stat-count').textContent=pres.length||3;
-        document.getElementById('term-loaded').textContent=`✓ ${pres.length||3} presentations loaded`;
-      }
-
-      // ── UTILS ──
-      function fmtSize(b){if(b<1024)return b+'B';if(b<1048576)return Math.round(b/1024)+'KB';return(b/1048576).toFixed(1)+'MB';}
-      function getSiteUrl(){return window.location.href.replace(/[?#].*/,'');}
-      function copySiteUrl(){navigator.clipboard.writeText(getSiteUrl()).then(()=>showToast('URL copied! Paste it on Creative Market ↗'));}
-      function showToast(msg,err=false){const t=document.getElementById('toast');t.textContent=msg;t.className='toast'+(err?' err':'');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);}
-
-      // ── INIT ──
-      document.getElementById('site-url-display').textContent=getSiteUrl();
-      updateKeyStatus();
-      render();
     </script>
   </body>
 </html>
